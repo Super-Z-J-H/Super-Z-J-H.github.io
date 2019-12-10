@@ -20,13 +20,13 @@ body {
   background-position: center;
 }
 #carousel-example-generic .carousel-inner .item:nth-child(1) {
-  background-image: url("./images/1.jpg");
+  background-image: url("../images/1.jpg");
 }
 #carousel-example-generic .carousel-inner .item:nth-child(2) {
-  background-image: url("./images/2.jpg");
+  background-image: url("../images/2.jpg");
 }
 #carousel-example-generic .carousel-inner .item:nth-child(3) {
-  background-image: url("./images/4.jpg");
+  background-image: url("../images/4.jpg");
 }
 #carousel-example-generic .carousel-inner .item .caption {
   padding-top: 100px;
@@ -169,7 +169,7 @@ body {
 .fashion {
   margin-top: 100px;
   height: 100%;
-  background-image: url("images/bg2.jpg");
+  background-image: url("../images/bg2.jpg");
   background-position-x: -580px;
   background-repeat: no-repeat;
   height: 250px;
@@ -224,7 +224,7 @@ body {
 }
 .newsletter {
   height: 100%;
-  background-image: url("images/bg3.jpg");
+  background-image: url("../images/bg3.jpg");
   background-attachment: fixed;
   background-position-x: -400px;
 }
