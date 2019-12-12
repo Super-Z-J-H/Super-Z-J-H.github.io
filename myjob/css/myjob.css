@@ -1,0 +1,292 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Asap Condensed', sans-serif;
+  width: 100%;
+}
+.header {
+  height: 0;
+}
+.header .navbar {
+  padding: 30px 20px;
+  background: rgba(12, 19, 9, 0.4);
+  border: none;
+}
+.header .navbar .navbar-brand {
+  font-size: 56px;
+  color: #fff !important;
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 2px;
+  font-family: 'Asap Condensed', sans-serif;
+}
+.header .navbar .nav li a {
+  color: white;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin: 0 7px;
+  font-family: 'Asap Condensed', sans-serif;
+  padding: 20px 10px;
+}
+.banner {
+  background: url("../images/b1.jpg") no-repeat;
+  background-size: cover;
+  height: 600px;
+}
+.banner .container-fluid {
+  padding-top: 200px;
+}
+.banner .container-fluid .flexslider {
+  background: none;
+  margin: 0 auto;
+  height: 300px;
+  border: none;
+}
+.banner .container-fluid .flexslider .flex-control-nav li a {
+  width: 20px;
+  background: white;
+}
+.banner .container-fluid .flexslider .flex-control-nav li .flex-active {
+  background: rgba(0, 0, 0, 0.9);
+}
+.banner .container-fluid .flexslider .flex-direction-nav a:before {
+  color: white;
+}
+.banner .container-fluid .flexslider ul li h4 {
+  font-size: 50px;
+  line-height: 50px;
+  color: #ffffff;
+  font-weight: 600;
+  text-align: center;
+  font-family: 'Asap Condensed', sans-serif;
+}
+.banner .container-fluid .flexslider ul li p {
+  font-family: 'Asap Condensed', sans-serif;
+  padding: 0 40px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #e6e6e6;
+  line-height: 2em;
+  text-align: center;
+  margin: 1.5em 0;
+}
+.about .container .title h4 {
+  font-size: 35px;
+  text-align: center;
+  color: #006cdc;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+.about .container .row .col-xs-6 .pic span {
+  color: #000002;
+  font-size: 30px;
+}
+.about .container .row .col-xs-6 .pic span:hover {
+  color: #006cdc;
+}
+.about .container .row .col-xs-6 .pic h4 {
+  color: #000;
+  font-size: 1.2em;
+  margin: 1.4em 0 0.8em;
+  transition: 0.5s all;
+  font-family: 'Asap Condensed', sans-serif;
+}
+.about .container .row .col-xs-6 .pic p {
+  width: 150px;
+  margin-top: 15px;
+  border-left: 1px black solid;
+  padding-left: 20px;
+  font-family: 'Asap Condensed', sans-serif;
+  color: #999;
+}
+.about .container .row {
+  text-align: center;
+  font-family: 'Asap Condensed', sans-serif;
+}
+.about .container .row .left {
+  width: 100%;
+  min-height: 240px;
+  background-image: url("../images/a1.jpg");
+  background-size: cover;
+  background-position-y: center;
+  background-position-x: center;
+}
+.about .container .row .right h3 {
+  font-size: 32px;
+  letter-spacing: 4px;
+  color: #006cdc;
+  text-transform: uppercase;
+}
+.about .container .row .right P {
+  font-size: 15px;
+  color: #232323;
+  line-height: 28px;
+}
+.about .container .row .right button {
+  font-size: 14px;
+  color: #006cdc;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  letter-spacing: 2px;
+  background: none;
+  outline: none;
+  padding: 10px 22px;
+  border: 2px solid #006cdc;
+}
+.service {
+  margin-top: 40px;
+  padding-top: 30px;
+  font-family: 'Asap Condensed', sans-serif;
+  text-align: center;
+  background: black;
+  color: white;
+}
+.service .title {
+  padding: 0 20%;
+  text-align: center;
+}
+.service .title h3 {
+  font-size: 47px;
+  text-align: center;
+  color: #006cdc;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+.service .title p {
+  font-size: 14px;
+  letter-spacing: 1px;
+  line-height: 2em;
+  text-align: center;
+}
+.service .title .line {
+  height: 2px;
+  width: 30%;
+  display: block;
+  background: white;
+  margin: 0 auto;
+}
+.service .row {
+  padding-top: 50px;
+}
+.service .row .col-xs-12 img {
+  width: 100%;
+}
+.service .row .col-xs-12 .one {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+  border: 2px #006cdc solid;
+  background: white;
+  transition: all;
+}
+.service .row .col-xs-12 .one .glyphicon {
+  line-height: 50px;
+  font-size: 25px;
+  color: #006cdc;
+}
+.service .row .col-xs-12 .one:hover {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+  border: 2px #006cdc solid;
+  background: #006cdc;
+}
+.service .row .col-xs-12 .one:hover .glyphicon {
+  line-height: 50px;
+  font-size: 25px;
+  color: white;
+}
+.ourportfolio {
+  padding-top: 50px;
+}
+.ourportfolio h3 {
+  font-size: 47px;
+  text-align: center;
+  color: #006cdc;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+.ourportfolio .sap_tabs {
+  padding-top: 40px;
+}
+.ourportfolio .sap_tabs .row .col-xs-6 {
+  padding: 0;
+  overflow: hidden;
+}
+.ourportfolio .sap_tabs .row .col-xs-6 img {
+  width: 100%;
+  transform: scale(1);
+  transition: all 0.4s;
+}
+.ourportfolio .sap_tabs .row .col-xs-6 img:hover {
+  transform: scale(1.1);
+}
+@media (min-width: 768px) {
+  .header .navbar .nav li a {
+    color: white;
+    font-size: 20px;
+    margin: 0 7px;
+  }
+  .banner {
+    height: 800px;
+  }
+  .banner .container-fluid {
+    padding-top: 300px;
+  }
+  .banner .container-fluid .flexslider {
+    height: 300px;
+  }
+  .banner .container-fluid .flexslider ul li h4 {
+    font-size: 63px;
+    line-height: 70px;
+  }
+  .banner .container-fluid .flexslider ul li p {
+    padding: 0 200px;
+    font-size: 18px;
+  }
+  .about .container .row .left {
+    width: 100%;
+    min-height: 420px;
+    background-image: url("../images/a1.jpg");
+    background-size: cover;
+  }
+}
+@media (min-width: 992px) {
+  .header .navbar .nav li a {
+    color: white;
+    font-size: 20px;
+    margin: 0 16px;
+  }
+  .banner .container-fluid .flexslider ul li p {
+    padding: 0 300px;
+    font-size: 18px;
+  }
+  .about .container .row .left {
+    width: 100%;
+    min-height: 320px;
+    background-image: url("../images/a1.jpg");
+    background-size: cover;
+  }
+  .service .col-xs-12 img {
+    display: block;
+    width: 450px;
+  }
+}
+@media (min-width: 1200px) {
+  .header .navbar .nav li a {
+    color: white;
+    font-size: 20px;
+    margin: 0 20px;
+  }
+  .banner .container-fluid .flexslider ul li p {
+    padding: 0 420px;
+    font-size: 18px;
+  }
+  .service .col-xs-12 img {
+    display: block;
+    width: 550px;
+  }
+}
