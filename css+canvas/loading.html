@@ -11,12 +11,12 @@
 
 
 <body>
-    
+
     <style>
-        body{
+        body {
             background: #38383f;
         }
-        </style>
+    </style>
     <!-- loading字母 -->
     <style>
         .stage {
@@ -524,18 +524,20 @@
             position: relative;
             top: 250px;
         }
-        .box{
+
+        .box {
             width: 10px;
             height: 40px;
             /* background: red; */
             border-top: 2px solid rgba(0, 0, 0, 0.5);
             border-bottom: 2px solid rgba(0, 0, 0, 0.5);
-            
+
             position: absolute;
             top: 20px;
             z-index: 5;
         }
-        .box::after{
+
+        .box::after {
             content: "";
             width: 10px;
             height: 40px;
@@ -545,6 +547,7 @@
             top: 80px;
             z-index: 5;
         }
+
         .control {
             height: 8px;
             width: 150px;
@@ -559,7 +562,8 @@
             transition: all 3s;
 
         }
-        .backControl{
+
+        .backControl {
             width: 150px;
             height: 10px;
             background: #2a2a2e;
@@ -568,7 +572,8 @@
             position: absolute;
             left: 25px;
         }
-        .onControl{
+
+        .onControl {
             width: 15px;
             height: 15px;
             background: #3dcadf;
@@ -576,12 +581,14 @@
             position: absolute;
             left: 100px;
         }
-        .one{
+
+        .one {
             position: absolute;
             left: -10px;
             bottom: -18px;
         }
-        .two{
+
+        .two {
             position: absolute;
             right: -25px;
             bottom: -18px;
@@ -596,9 +603,9 @@
         <div class="playground">
             <div class="backControl"></div>
             <div class="one">0 c</div>
-            <input class="control" type="range"  value="50">
+            <input class="control" type="range" value="50">
             <div class="two">100 c</div>
-            
+
             <div class="onControl"></div>
         </div>
     </div>
@@ -607,14 +614,311 @@
     <script src="https://cdn.staticfile.org/jquery/1.12.4/jquery.js">
     </script>
     <script>
-        $(".control").on("input",function(){
+        $(".control").on("input", function () {
             console.log(this.value);
             // console.log((30+this.value)+"px");
-            
-            $(".onControl").css({"left":(parseInt(this.value)*1.5+25)+"px"})
-            $(".temperature").css({"height":parseInt(this.value)+"%"})
+
+            $(".onControl").css({ "left": (parseInt(this.value) * 1.5 + 25) + "px" })
+            $(".temperature").css({ "height": parseInt(this.value) + "%" })
         })
     </script>
-</body>
+
+    <!-- 时钟 -->
+    <style>
+        .canvas1 {
+            align-items: center;
+            background: #eeeeee;
+            border-radius: 50%;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+            display: flex;
+            height: 10em;
+            justify-content: center;
+            margin: 1em 1em 2em 1em;
+            width: 10em;
+            position: absolute;
+            top: 500px;
+            left: 10%;
+        }
+
+        .spinner2 {
+            animation: spinnerTwo 1s linear infinite;
+            background: #4DB6AC;
+            border-radius: 100px;
+            height: 3em;
+            transform-origin: top;
+            position: absolute;
+            top: 50%;
+            width: .22em;
+        }
+
+        .hourHand {
+            animation: spinnerTwo 7s linear infinite;
+            background: #4DB6AC;
+            border-radius: 100px;
+            height: 2em;
+            transform-origin: top;
+            position: absolute;
+            top: 50%;
+            width: .2em;
+        }
+
+        .dot {
+            background: #4DB6AC;
+            border-radius: 100%;
+            height: .5em;
+            width: .5em;
+        }
+
+        @keyframes spinnerTwo {
+            0% {
+                transform: rotate(0deg)
+            }
+
+            100% {
+                transform: rotate(360deg)
+            }
+        }
+    </style>
+
+    <div class="canvas1">
+        <div class="spinner2"></div>
+        <div class="hourHand"></div>
+        <div class="dot"></div>
+    </div>
+
+
+    <!-- 旋转 -->
+
+
+    <style>
+        .canvas2 {
+            position: absolute;
+            top: 500px;
+            left: 33%;
+            align-items: center;
+            background: #eeeeee;
+            border-radius: 50%;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+            display: flex;
+            height: 10em;
+            justify-content: center;
+            margin: 1em 1em 2em 1em;
+            width: 10em;
+        }
+
+        .spinner1 {
+            align-items: center;
+            border: .3em solid transparent;
+            border-top: .3em solid #4DB6AC;
+            border-right: .3em solid #4DB6AC;
+            border-radius: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .spinnerMax {
+            animation: spinnerOne 3s linear infinite;
+            height: 3em;
+            width: 3em;
+        }
+
+        .spinnerMid {
+            animation: spinnerOne 5s linear infinite;
+            height: 2.4em;
+            width: 2.4em;
+        }
+
+        .spinnerMin {
+            animation: spinnerOne 5s linear infinite;
+            height: 1.8em;
+            width: 1.8em;
+        }
+
+        @keyframes spinnerOne {
+            0% {
+                transform: rotate(0deg)
+            }
+
+            100% {
+                transform: rotate(360deg)
+            }
+        }
+    </style>
+    <div class=" canvas2">
+        <div class="spinner1 spinnerMax">
+            <div class="spinner1 spinnerMid">
+                <div class="spinner1 spinnerMin"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 飞入字母 -->
+    <style>
+        #load {
+            position: absolute;
+            width: 600px;
+            height: 36px;
+            left: 55%;
+            top: 65%;
+            overflow: visible;
+            user-select: none;
+            cursor: default;
+        }
+
+        #load div {
+            position: absolute;
+            width: 20px;
+            height: 36px;
+            opacity: 0;
+            font-family: Helvetica, Arial, sans-serif;
+            animation: move 2s linear infinite;
+            transform: rotate(180deg);
+            color: whitesmoke;
+        }
+
+        #load div:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        #load div:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        #load div:nth-child(4) {
+            animation-delay: 0.6s;
+        }
+
+        #load div:nth-child(5) {
+            animation-delay: 0.8s;
+        }
+
+        #load div:nth-child(6) {
+            animation-delay: 1s;
+        }
+
+        #load div:nth-child(7) {
+            animation-delay: 1.2s;
+        }
+
+        @keyframes move {
+            0% {
+                left: 0;
+                opacity: 0;
+            }
+
+            35% {
+                left: 41%;
+                transform: rotate(0deg);
+                opacity: 1;
+            }
+
+            65% {
+                left: 59%;
+                transform: rotate(0deg);
+                opacity: 1;
+            }
+
+            100% {
+                left: 100%;
+                transform: rotate(-180deg);
+                opacity: 0;
+            }
+        }
+    </style>
+    </style>
+    <div id="load">
+        <div>G</div>
+        <div>N</div>
+        <div>I</div>
+        <div>D</div>
+        <div>A</div>
+        <div>O</div>
+        <div>L</div>
+    </div>
+
+<!-- 炫酷进度条-->
+<style>
+#canvas2{
+
+    position:absolute;
+    top: 800px;
+    left: 500px;
+}
+</style>
+<div class="styleProgress">
+<canvas id="canvas2" width="900" height="100"></canvas>
+</div>
+<script>
+
+    /** @type {HTMLCanvasElement} */
+    var canvas = document.querySelector("#canvas2");
+    var ctx = canvas.getContext("2d");
+
+    let bar=0;
+    let frames = 0;
+    let barcolor = [randomNum(0, 255), randomNum(0, 255), randomNum(0, 255)]
+    function randomNum(n, m) {
+        return Math.floor(Math.random() * (m - n) + n)
+    }
+    function randomColor() {
+            return `rgba(${randomNum(50, 200, true)},${randomNum(50, 200, true)},${randomNum(50, 200, true)})`;
+        }
+    class Boll {
+        constructor(x, y, r, c) {
+            this.x = x;
+            this.y = y;
+            this.r = r;
+            this.c = c
+        }
+        draw() {
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.r, 0, 2 * Math.PI)
+            ctx.fillStyle = this.c;
+            ctx.fill()
+        }
+        move() {
+            // sy=this.sy-0.1;
+            this.x -=this.sx;
+            this.y -= this.sy;
+        }
+        updateBoll() {
+            this.r -= 0.1;
+            if(this.r<=0){
+                this.r=0
+            }
+            
+        }
+        generateSpeed(m, n) {
+                this.sx = randomNum(m, n) / 3;
+                this.sy = randomNum(m, n);
+            }
+
+    }
+    var b=[];
+    var id=setInterval(() => {
+        ctx.clearRect(0, 0, 900, 500);
+        ctx.fillStyle = "lightgray";
+        ctx.fillRect(50, 45, 900, 10);
+        ctx.fillStyle = "orange";
+        ctx.fillRect(50, 45, bar, 10);
+
+        if (frames % 2 == 0) {
+            let myboll=new Boll(bar+50,45,3,randomColor())
+            b.push(myboll)
+            myboll.draw();
+            myboll.generateSpeed(1,5)
+            bar++;
+        }
+        if(bar>900){
+            clearInterval(id);
+        }
+        for (myboll of b) {
+                myboll.move();
+                myboll.draw();
+                myboll.updateBoll();
+            }
+    }, 30)
+
+</script>
 
 </html>
