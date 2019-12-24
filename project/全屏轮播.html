@@ -1424,14 +1424,14 @@
         var numy=0;
         $(".control1").mousedown(function (event) {
              x=event.offsetX-numx;
-             y=numy-event.offsetY;
+             y=event.offsetY-numy;
              $(".control1").on("mousemove",function(event){
                 var q=event.offsetX;
                  var w=event.offsetY;
                   numx=q-x;
-                  numy=y-w;
-                // console.log(num);
-                 $(".bg").css("transform",`rotateY(${numx}deg) rotateX(${numy}deg)`)
+                  numy=w-y;
+              
+                 $(".bg").css("transform",`rotateY(${numx}deg) rotateX(${-numy}deg)`)
              })
              $("body").mouseup(function(event){
                 $(".control1").off("mousemove")
